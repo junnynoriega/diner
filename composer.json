@@ -1,0 +1,12 @@
+{
+  "name": "328/diner",
+  "authors": [
+    {
+      "name": "Junny Noriega-Arenas",
+      "email": "noriega-arenas.junny@student.greenriver.edu"
+    }
+  ],
+  "require": {
+    "bcosca/fatfree-core": "dev-master"
+  }
+}
