@@ -1,5 +1,5 @@
 <?php
-
+// order1 route -> views/order-form1.html
 // This is my controller
 
 // Turn on error reporting
@@ -16,8 +16,14 @@ $f3 = Base::instance();
 $f3->route('GET /', function () {
     // Instantiate a view
     $view = new Template();
-    echo $view->render("views/diner-home.html");
-    echo "Welcome";
+    echo $view->render('views/diner-home.html');
+});
+
+// Define a breakfast route (328/diner/breakfast)
+$f3->route('GET /breakfast', function () {
+    // Instantiate a view
+    $view = new Template();
+    echo $view->render('views/breakfast.html');
 });
 
 // Run Fat Free
