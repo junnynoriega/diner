@@ -1,5 +1,5 @@
 <?php
-    function getMeal()
+    function getMeals()
     {
         return array(" breakfast", " lunch", " dinner", " dessert");
     }
