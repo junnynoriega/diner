@@ -101,4 +101,13 @@ class Controller
         // destroy session array (CLEARING any previous data so that it doesn't overlap new data)
         session_destroy();
     }
+    function admin() {
+        // get the data from the model
+        $orders = $GLOBALS['dataLayer']->getOrders();
+        $this->_f3->set('orders', $orders);
+
+        // display the admin page
+        $view = new Template();
+        echo $view->render('views/admin.html');
+    }
 }

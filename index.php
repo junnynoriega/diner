@@ -41,5 +41,9 @@ $f3->route('GET /summary', function() {
     $GLOBALS['con']->summary();
 });
 
+//Define a summary route (328/admin)
+$f3->route('GET /admin', function() {
+    $GLOBALS['con']->admin();
+});
 // Run Fat Free
 $f3->run();
