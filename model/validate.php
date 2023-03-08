@@ -1,7 +1,10 @@
 <?php
-    // Return true if the food has at least
+
+class Validate
+{
+// Return true if the food has at least
     // two characters
-    function validFood($food) {
+    static function validFood($food) {
 //        if (strlen($food) <= 2) {
 //            return false;
 //        }
@@ -12,7 +15,7 @@
         return strlen($food) > 2;
     }
 
-    function validMeal($meal) {
+    static function validMeal($meal) {
 //        if (in_array($meal, getMeal())) {
 //            return true;
 //        }
@@ -20,5 +23,17 @@
 //            return false;
 //        }
 
-        return in_array($meal, getMeals());
+        return in_array($meal, DataLayer::getMeals());
     }
+    //Make sure user's meal is valid
+    static function validCondiments($userConds)
+    {
+        $validConds = DataLayer::getCondiments();
+        foreach ($userConds as $cond) {
+            if (!in_array($cond, $validConds)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
